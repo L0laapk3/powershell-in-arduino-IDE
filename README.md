@@ -35,7 +35,9 @@ This will print the path to the .elf path of your assembly in the console.
 
 Here is a sample code that I wrote. It quickly writes `r17` and `r16` to `PORTD` when `TIMER2_COMPA` and `TIMER2_COMPB` interrupts are triggered. It places this assembly code directly into the jmp table at the beginning of the program memory (which is afaik impossible without modding the arduino IDE like I did, please let me know if I'm wrong)
 
+
 Note 1: I couldn't get this code to compile on arduino avr boards versions 1.6.12 and up.
+
 Note 2: The powershell code relies on external interrupt 0 and 1 jumps both pointing to the same address (\_\_bad\_interrupt by default when the ISR functions for these are not defined). This is entirely because I'm lazy. 
 
 ```
